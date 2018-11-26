@@ -31,4 +31,20 @@ else
     HTTPS_RES=${RES}
 fi
 
-echo ${HTTPS_RES}
+
+# Extended output ----
+# see https://git.nak.co/home/git-tools/issues/2
+# Implementation inspired by ~/bin/stow/reporting/*_gitlab.sh
+
+# Preconditions
+# ensure my Cp utility is available
+if [ -e ~/bin/stow/sh/sourceMe/Cp.sh ]; then
+  source ~/bin/stow/sh/sourceMe/Cp.sh
+fi
+
+# Write output to a tmp file
+tmpfile=$(mktemp "${TMPDIR:-/tmp/}$(basename $0).XXX")
+echo ${HTTPS_RES} | tee -a ${tmpfile}
+
+# Copy output tmp file
+Cpf ${tmpfile}
