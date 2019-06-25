@@ -14,7 +14,7 @@
 
 
 function gl_() {
-    git log --no-merges --graph --pretty=format:"%C(auto)%h %Cblue%cr%Creset%C(auto) %d %s" $@
+    git log --graph --pretty=format:"%C(auto)%h %Cblue%cr%Creset%C(auto) %d %s" $@
 }
 
 

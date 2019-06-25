@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # Git log inspection functions
 # Pretty formatting of either the selecting revision range or all commits
 # Default shows max info
@@ -14,7 +15,7 @@
 
 
 function gl() {
-    git log --no-merges --graph --pretty=format:"%C(auto)%h %Cblue%cr%Creset%C(auto) %d %s" ${1}
+    git log --graph --pretty=format:"%C(auto)%h %Cblue%cr%Creset%C(auto) %d %s" ${1}
 }
 
 gl ${1:---all}
