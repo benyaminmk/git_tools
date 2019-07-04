@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # Git log inspection functions
 # Pretty formatting of either the selecting revision range or all commits
 # Default shows max info

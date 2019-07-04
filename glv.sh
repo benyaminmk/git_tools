@@ -12,6 +12,7 @@
 # * `glv`: --stat
 # * `glvv`: -p
 
+
 function glv() {
     git log --stat --graph --pretty=format:"%C(auto)%h %Cblue%cr%Creset%C(auto) %d %s" ${1}
 }
